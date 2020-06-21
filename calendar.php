@@ -71,18 +71,12 @@
             }
          }
             
-            
-           
-            
           $calendar .="</td>";
-          // Increment counters
- 
           $currentDay++;
           $dayOfWeek++;
 
      }
      
-
      if ($dayOfWeek != 7) { 
      
           $remainingDays = 7 - $dayOfWeek;
@@ -98,7 +92,6 @@
 
     echo $calendar;
  }
-
 
 function checkslots($mysqli,$date){
 $stmt = $mysqli->prepare("select * from bookings where date = ? ");
@@ -116,22 +109,11 @@ $stmt = $mysqli->prepare("select * from bookings where date = ? ");
     }
 return $totalbookings;
 }
-
-
-
-
-
-
-
 ?>
-
 
 <!doctype html>
 <html lang="en">
   <head>
-
-
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <style>
@@ -143,8 +125,6 @@ return $totalbookings;
 
             }
             
-            
-
             .empty {
                 display: none;
             }
@@ -165,9 +145,6 @@ return $totalbookings;
                 position: relative;
                 padding-left: 50%;
             }
-
-
-
             td:nth-of-type(1):before {
                 content: "Sunday";
             }
@@ -192,7 +169,6 @@ return $totalbookings;
 
 
         }
-
 
         @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
             body {
